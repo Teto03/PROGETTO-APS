@@ -1,0 +1,29 @@
+ATTORI
+- Utenti generici <-- Utenti registrati (clienti)
+	
+	Gli utenti generici possono fare le seguenti cose:
+	- Visionare cataloghi
+	- Effettuare ricerche
+	- Registrarsi e diventare utenti registrati
+
+	Gli utenti registrati (clienti) possono fare le seguenti cose:
+	- Gestire il proprio account
+
+		Sulla base delle categorie esistenti
+		- Inserire richieste di prenotazioni --> ferroviarie, aeree, pacchetto
+		- Modificare richieste di prenotazioni --> ferroviarie, aeree, pacchetto
+
+- Amministratori
+	
+	Gli ammnistratori possono fare le seguenti cose:
+	- Inserire cataloghi dei tour operator convenzionati
+	- Aggiornare cataloghi dei tour operator convenzionati inseriti
+	
+- Operatori 
+
+	Gli operatori possono fare le seguenti cose:
+	- Gestire richieste degli utenti diverse dalle prenotazioni
+		- Rispondere email
+		- Rendere effettiva modifica di una prenotazioni
+		- Cancellare una prenotazione
+		- Gestire rimborso se un una prenotazione viene cancellata
