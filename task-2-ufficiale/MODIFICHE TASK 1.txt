@@ -1,0 +1,14 @@
+MODIFICHE TASK-1
+- Abbiamo cambiato la gestione delle email di riepilogo e conferma dei pagamenti (caparra-saldo)
+	- Le mail di riepilogo della richiesta di prenotazione e di esito dei pagamenti non vengono più inviate da un gestore mail ma dal sistema
+
+- Nel diagramma dei casi d'uso è stato rimosso il caso d'uso RendeEffettivaPrenotazione (non viene resa effettiva dall'operatore ma dal sistema)
+
+- Nel modello di dominio è stato cambiato il nome della classe concettuale RichiestaPrenotazione in RichiestaUtente 
+- Nel modello di dominio è stata inserita una nuova relazione tra UtenteRegistrato e Prenotazione chiamata richiede
+	- L'utente registrato può ora effettuare una RichiestaUtente o richiedere una nuova Prenotazione
+- Nel modello di dominio è stata inserita la classe concettuale Prodotto che generalizza le due classi Viaggio e PacchettoVacanza
+
+- Modificate le seguenti tabelle dei casi d'uso dettagliati
+	- Inserisci Richiesta Prenotazione: Sistema invia email di riepiligo, Sistema invia email riepilogo prima che venga abilitato il pagamento 
+	- Registrazione Utente: Il sistema deve inviare una mail di conferma all'utente
