@@ -11,4 +11,4 @@ MODIFICHE TASK-1
 
 - Modificate le seguenti tabelle dei casi d'uso dettagliati
 	- Inserisci Richiesta Prenotazione: Sistema invia email di riepiligo, Sistema invia email riepilogo prima che venga abilitato il pagamento 
-	- 
+	- Registrazione Utente: Il sistema deve inviare una mail di conferma all'utente
