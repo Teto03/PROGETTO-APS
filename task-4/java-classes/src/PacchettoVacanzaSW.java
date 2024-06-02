@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 import javax.xml.catalog.Catalog;
 
 public class PacchettoVacanzaSW extends ProdottoSW {
@@ -35,7 +37,7 @@ public class PacchettoVacanzaSW extends ProdottoSW {
   }
 
   public void setIdPacchetto(int idPacchetto) {
-    this.idPacchetto = idPacchetto;
+    idPacchetto = getIdProducto();
   }
 
   public LocalDate getDataInizio() {
@@ -100,7 +102,7 @@ public class PacchettoVacanzaSW extends ProdottoSW {
 
     // Scorri il catalogo alla ricerca del pacchetto da modificare
     for (PacchettoVacanzaSW pacchetto : catalogo.getPacchetti()) {
-      if (pacchetto.getIdPacchetto() == this.idPacchetto) {
+      if (pacchetto.getIdPacchetto() == this.idProdotto) {
         // Rimuovi dal catalogo il vecchio pacchetto
         catalogo.cancellaPacchettoVacanza(pacchetto);
 
@@ -110,6 +112,15 @@ public class PacchettoVacanzaSW extends ProdottoSW {
         return true;
       }
     }
+  }
+
+  public PacchettoVacanzaSW selezionaPacchetto(int idPacchetto, Prodotto_SW[] catalogo) {
+    for (PacchettoVacanzaSW pacchetto : catalogo) {
+      if (pacchetto.getId() == idPacchetto) {
+        return pacchetto;
+      }
+    }
+    return null; // Restituisce null se non trova un pacchetto con l'id specificato
   }
 
 }
