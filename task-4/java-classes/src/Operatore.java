@@ -95,7 +95,7 @@ public class Operatore extends UtenteGenerico {
 
     // Aggiungi l'importo del rimborso al saldo del cliente
     double nuovoSaldo = saldoAttuale + importoRimborso;
-    cliente.setSaldo(nuovoSaldo);
+    prenotazione.setSaldo(nuovoSaldo);
 
     System.out.println("Rimborso di " + importoRimborso + " effettuato con successo. Nuovo saldo: " + nuovoSaldo);
   }
