@@ -84,4 +84,19 @@ public class Operatore extends UtenteGenerico {
       richiesta.gestici(2);
     }
   }
+
+  public void gestisciRimborso(PrenotazioneSW prenotazione) {
+    double saldoAttuale = prenotazione.getSaldo();
+    // Verifica se l'importo del rimborso è valido
+    if (importoRimborso < 0) {
+      System.out.println("L'importo del rimborso non può essere negativo.");
+      return;
+    }
+
+    // Aggiungi l'importo del rimborso al saldo del cliente
+    double nuovoSaldo = saldoAttuale + importoRimborso;
+    cliente.setSaldo(nuovoSaldo);
+
+    System.out.println("Rimborso di " + importoRimborso + " effettuato con successo. Nuovo saldo: " + nuovoSaldo);
+  }
 }
